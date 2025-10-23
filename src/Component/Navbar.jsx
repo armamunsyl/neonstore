@@ -4,7 +4,7 @@ import aveterimg from '../assets/aveter.png'
 
 const Navbar = () => {
     const links = <>
-        <NavLink><li>Home</li></NavLink>
+        <NavLink to={"/"}><li>Home</li></NavLink>
         <NavLink to={"/news"}><li>Esports News</li></NavLink>
     </>
     return (
