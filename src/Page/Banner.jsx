@@ -5,7 +5,7 @@ import slideimg3 from '../assets/slideimg3.png'
 
 const Banner = () => {
   return (
-    <div className="carousel w-full h-[80vh] rounded-xl">
+    <div className="carousel w-full h-[30vh] rounded-xl mt-4 ">
       
       <div id="slide1" className="carousel-item relative w-full">
         <img

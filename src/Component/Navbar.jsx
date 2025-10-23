@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router'
 import aveterimg from '../assets/aveter.png'
-import logoimg from '../assets/logo1.png'
 
 const Navbar = () => {
     const links = <>
@@ -9,7 +8,7 @@ const Navbar = () => {
         <NavLink><li>All Apps</li></NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 md:max-w-11/12 mx-auto">
+        <div className="navbar bg-[#e0f2f5] md:max-w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,10 +20,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-               <div className='flex items-center pag-1'>
-                 <img className='hidden md:block w-10 rounded-full mr-1' src={logoimg} alt="" />
+
                 <h4 className="text-[#0cc0df] text:sm md:text-xl">NeonBytes Store</h4>
-               </div>
+         
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
@@ -33,7 +31,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end ">
                 <img className='w-10 mr-3' src={aveterimg} alt="" />
-                <a className="btn bg-[#0cc0df] text-white py-4">Login</a>
+                
+                <NavLink to={"/login"}><a className="btn bg-[#0cc0df] text-white py-4">Login</a></NavLink>
             </div>
         </div>
     )
