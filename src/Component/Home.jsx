@@ -1,9 +1,12 @@
 import React from 'react'
+import Banner from '../Page/Banner'
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
+    return (
+        <div className='max-w-11/12 mx-auto'> 
+            <Banner></Banner>
+        </div>
+    )
 }
 
 export default Home

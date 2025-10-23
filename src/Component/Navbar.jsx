@@ -9,7 +9,7 @@ const Navbar = () => {
         <NavLink><li>All Apps</li></NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 ">
+        <div className="navbar bg-base-100 md:max-w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,8 +22,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                <div className='flex items-center pag-1'>
-                 <img className='w-10 rounded-full mr-1' src={logoimg} alt="" />
-                <h4 className="text-[#0cc0df] text-xl">NeonBytes Store</h4>
+                 <img className='hidden md:block w-10 rounded-full mr-1' src={logoimg} alt="" />
+                <h4 className="text-[#0cc0df] text:sm md:text-xl">NeonBytes Store</h4>
                </div>
             </div>
             <div className="navbar-center hidden lg:flex">

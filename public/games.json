@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Valorant",
+    "coverPhoto": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/294/2025/06/05/B110272-Cover-istilah-dalam-valorant-scaled-2310154962.jpg",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "A tactical 5v5 shooter where precise gunplay meets unique agent abilities. Developed by Riot Games.",
+    "ratings": "4.9",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "2",
+    "title": "PUBG Mobile",
+    "coverPhoto": "https://www.vice.com/wp-content/uploads/sites/2/2018/12/1545803974526-40176727491_31da2b03d8_b.jpeg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "A battle royale game where 100 players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.8",
+    "developer": "Krafton"
+  },
+  {
+    "id": "3",
+    "title": "GTA V",
+    "coverPhoto": "https://vulcanpost.com/wp-content/uploads/2015/04/GTAV-Review.jpg",
+    "category": "Open World",
+    "downloadLink": "https://www.rockstargames.com/V/",
+    "description": "An open world action-adventure game set in the fictional state of San Andreas, featuring three main characters and endless chaos.",
+    "ratings": "4.7",
+    "developer": "Rockstar Games"
+  }
+]
