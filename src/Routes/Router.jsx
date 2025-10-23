@@ -8,6 +8,7 @@ import Login from "../Component/Login";
 import Register from "../Component/Register";
 import MyProfile from "../Page/MyProfile";
 import EsportsNews from "../Page/EsportsNews";
+import GameDetails from "../Component/GameDetails";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: "/news",
                 Component: EsportsNews,
+            },
+            {
+                path: "/games/:id",
+                Component: GameDetails,
             }
 
         ]
