@@ -6,6 +6,8 @@ import { Children, Component } from "react";
 import Home from "../Component/Home";
 import Login from "../Component/Login";
 import Register from "../Component/Register";
+import MyProfile from "../Page/MyProfile";
+import EsportsNews from "../Page/EsportsNews";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 Component: Register,
+            },
+            {
+                path: "/myprofile",
+                Component: MyProfile,
+            },
+            {
+                path: "/news",
+                Component: EsportsNews,
             }
 
         ]

@@ -5,7 +5,7 @@ import aveterimg from '../assets/aveter.png'
 const Navbar = () => {
     const links = <>
         <NavLink><li>Home</li></NavLink>
-        <NavLink><li>All Apps</li></NavLink>
+        <NavLink to={"/news"}><li>Esports News</li></NavLink>
     </>
     return (
         <div className="navbar bg-[#e0f2f5] md:max-w-11/12 mx-auto">
@@ -30,7 +30,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end ">
-                <img className='w-10 mr-3' src={aveterimg} alt="" />
+                <NavLink to={"/myprofile"}><img className='w-10 mr-3' src={aveterimg} alt="" /></NavLink>
+                
                 
                 <NavLink to={"/login"}><a className="btn bg-[#0cc0df] text-white py-4">Login</a></NavLink>
             </div>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Team Liquid Wins Valorant Masters 2025",
+    "thumbnail": "https://esportsinsider.com/wp-content/uploads/2025/06/paper_rex_valorant_masters.jpg",
+    "source": "https://www.dexerto.com/valorant/team-liquid-wins-masters-2025",
+    "description": "Team Liquid secured the Valorant Masters 2025 title after an incredible 3-1 comeback against Sentinels in Tokyo."
+  },
+  {
+    "id": 2,
+    "title": "PUBG Global Championship Kicks Off",
+    "thumbnail": "https://www.krafton.com/wp-content/uploads/2022/10/%ec%82%ac%ec%a7%84%ec%9e%90%eb%a3%8c1_%eb%b0%b0%ed%8b%80%ea%b7%b8%eb%9d%bc%ec%9a%b4%eb%93%9c-%ec%9d%b4%ec%8a%a4%ed%8f%ac%ec%b8%a0-%ec%b5%9c%ea%b0%95%ec%a0%84-PGC-2022-%ec%9d%b4%eb%af%b8%ec%a7%80-1600x800-1.jpg",
+    "source": "https://www.esportsinsider.com/pubg-global-2025",
+    "description": "32 of the best teams around the world are competing for the $5M prize pool in the PUBG Global Championship 2025."
+  },
+  {
+    "id": 3,
+    "title": "GTA Online Introduces Esports Races",
+    "thumbnail": "https://static.digit.in/GTA-online.jpg",
+    "source": "https://www.rockstargames.com/newswire/article/gta-esports-race",
+    "description": "Rockstar Games has officially launched a new competitive race mode inside GTA Online — turning it into a virtual motorsport scene."
+  },
+  {
+    "id": 4,
+    "title": "League of Legends Worlds 2025 Announced",
+    "thumbnail": "https://esportsinsider.com/wp-content/uploads/2025/07/league-of-legends-worlds-2025-venues-format-large.jpg",
+    "source": "https://www.invenglobal.com/articles/worlds-2025",
+    "description": "Riot Games confirms that Worlds 2025 will be hosted in Seoul, featuring a revamped knockout format and new fan-interactive events."
+  },
+  {
+    "id": 5,
+    "title": "CS2 Major: NaVi Pulls an Upset Victory",
+    "thumbnail": "https://root-nation.com/wp-content/uploads/2024/04/navi-pgl-cs2-major-copenhagen-2024-1.jpg",
+    "source": "https://www.hltv.org/news/na-vi-cs2-major",
+    "description": "NaVi stunned everyone by defeating FaZe Clan in a 2-0 sweep to take home the Counter-Strike 2 Major trophy."
+  }
+]
