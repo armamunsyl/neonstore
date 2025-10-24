@@ -9,11 +9,13 @@ import Register from "../Component/Register";
 import MyProfile from "../Page/MyProfile";
 import EsportsNews from "../Page/EsportsNews";
 import GameDetails from "../Component/GameDetails";
+import ErrorPage from "../Page/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         Component: Layout,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 index: true,

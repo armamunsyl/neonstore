@@ -9,6 +9,10 @@ const EsportsNews = () => {
       .then((data) => setNews(data));
   }, []);
 
+  useEffect(() => {
+    document.title = "News";
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#f9fafb] py-14 px-6 md:px-16 text-gray-800">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">

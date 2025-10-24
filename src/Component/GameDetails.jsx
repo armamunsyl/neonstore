@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router";
 import { useEffect, useState } from "react";
 
 const GameDetails = () => {
+  
   const { id } = useParams();
   const [game, setGame] = useState(null);
 
@@ -13,7 +14,13 @@ const GameDetails = () => {
         setGame(foundGame);
       });
   }, [id]);
-
+  useEffect(() => {
+    if (game) {
+      document.title = `${game.title}`;
+    } else {
+      document.title = "Game Details";
+    }
+  }, [game]);
   if (!game) {
     return (
       <div className="min-h-[80vh] flex items-center justify-center text-gray-500">
@@ -21,6 +28,7 @@ const GameDetails = () => {
       </div>
     );
   }
+  
 
   return (
     <div className="min-h-screen bg-[#f9fafb] py-14 px-6 md:px-16">

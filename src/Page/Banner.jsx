@@ -53,9 +53,6 @@ const Banner = () => {
               {slide.title}
             </h2>
             <p className="text-gray-600">{slide.description}</p>
-            <button className="btn bg-[#0cc0df] hover:bg-[#09b1cd] border-none text-white font-semibold">
-              Explore Now
-            </button>
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center items-center p-6 md:p-10">

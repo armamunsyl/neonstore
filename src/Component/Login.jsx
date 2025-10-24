@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router';
 
 const Login = () => {
-    const submithandle= (e) =>  {
+    const submithandle = (e) => {
         e.preventDefault();
         console.log(e.target.email.value);
-        
+
+
     }
+    useEffect(() => {
+        document.title = "Login";
+    }, []);
     return (
         <div className="hero max-w-11/12 mx-auto bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">

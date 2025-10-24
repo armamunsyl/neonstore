@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const MyProfile = () => {
+          useEffect(() => {
+          document.title = "My Profile";
+      }, []);
   return (
     <div className="min-h-[85vh] flex items-center justify-center bg-[#f9fafb] px-4">
       <div className="bg-white p-10 rounded-2xl shadow-md text-center max-w-sm w-full border border-gray-200">
