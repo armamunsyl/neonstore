@@ -9,8 +9,10 @@ const Home = () => {
     }, []);
     return (
         <div className='max-w-11/12 mx-auto bg-base-200 p-4'>
+            
             <Banner></Banner>
             <PopularGames></PopularGames>
+            {import.meta.env.VITE_name}
             <Newslatter></Newslatter>
         </div>
     )
