@@ -12,7 +12,6 @@ const Home = () => {
             
             <Banner></Banner>
             <PopularGames></PopularGames>
-            {import.meta.env.VITE_name}
             <Newslatter></Newslatter>
         </div>
     )
