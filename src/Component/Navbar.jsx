@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import aveterimg from "../assets/aveter.png";
+import { div, h1 } from "framer-motion/client";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -97,11 +98,19 @@ const Navbar = () => {
                         </NavLink>
                     </>
                 ) : (
-                    <NavLink to="/login">
-                        <div className="btn bg-[#0cc0df] text-white py-4">Login</div>
-                    </NavLink>
+                    <>
+                        <NavLink to="/register">
+                            <div className="btn bg-[#0cc0df] text-white py-4">Register</div>
+                        </NavLink>
+                        <NavLink to="/login">
+                            <div className="btn bg-[#0cc0df] text-white py-4">Login</div>
+                        </NavLink>
+                    </>
+
+
                 )}
             </div>
+
         </div>
     );
 };
