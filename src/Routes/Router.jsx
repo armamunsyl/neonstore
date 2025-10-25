@@ -10,6 +10,7 @@ import MyProfile from "../Page/MyProfile";
 import EsportsNews from "../Page/EsportsNews";
 import GameDetails from "../Component/GameDetails";
 import ErrorPage from "../Page/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,11 +36,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/news",
-                Component: EsportsNews,
+                element: <PrivateRoute>
+                    <EsportsNews></EsportsNews>
+                </PrivateRoute>,
             },
             {
                 path: "/games/:id",
-                Component: GameDetails,
+                element: <PrivateRoute>
+                    <GameDetails></GameDetails>
+                </PrivateRoute>
             }
 
         ]

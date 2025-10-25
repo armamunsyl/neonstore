@@ -1,42 +1,112 @@
-import React, { useEffect } from 'react'
-import { NavLink } from 'react-router';
+import React, { useEffect, useContext, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-    const submithandle = (e) => {
-        e.preventDefault();
-        console.log(e.target.email.value);
+  const { loginUser, googleLogin } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
+  const submithandle = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    }
-    useEffect(() => {
-        document.title = "Login";
-    }, []);
-    return (
-        <div className="hero max-w-11/12 mx-auto bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+    loginUser(email, password)
+      .then(() => {
+        toast.success("Login Successful!");
+        navigate(from, { replace: true });
+      })
+      .catch(() => {
+        setError("Invalid email or password!");
+        toast.error("Login Failed! Please check credentials.");
+      });
+  };
 
-                <div className="card bg-[#e0f2f5] w-full max-w-sm shrink-0 shadow-2xl">
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        toast.success("Logged in with Google!");
+        navigate(from, { replace: true });
+      })
+      .catch(() => {
+        toast.error("Google Login Failed!");
+      });
+  };
 
-                    <div className="card-body">
-                        <div className="text-center lg:text-left">
-                            <h1 className="text-2xl font-bold text-center text-[#0cc0df]">Login now!</h1>
-                        </div>
-                        <form onSubmit={submithandle}>
-                            <fieldset className="fieldset">
-                                <label className="label">Email</label>
-                                <input name='email' type="email" className="input" placeholder="Email" />
-                                <label className="label">Password</label>
-                                <input name='password' type="password" className="input" placeholder="Password" />
-                                <div><a className="link link-hover"> <NavLink>Forgot password?</NavLink> </a></div>
-                                <button type='submit' className="btn  mt-4 bg-[#0cc0df] text-white">Login</button>
-                            </fieldset>
-                        </form>
-                        <h1>Dont Have an Account ? <span className='link link-hover text-[#04a8c5]'><NavLink to={"/register"}>Register</NavLink></span></h1>
-                    </div>
-                </div>
+  useEffect(() => {
+    document.title = "NeonBytes Store | Login";
+  }, []);
+
+  return (
+    <div className="hero max-w-11/12 mx-auto bg-base-200 min-h-screen">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="card bg-[#e0f2f5] w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card-body">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-[#0cc0df]">Login now!</h1>
             </div>
-        </div>
-    )
-}
 
-export default Login
+            <form onSubmit={submithandle}>
+              <fieldset className="fieldset">
+                <label className="label">Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  className="input"
+                  placeholder="Email"
+                  required
+                />
+                <label className="label">Password</label>
+                <input
+                  name="password"
+                  type="password"
+                  className="input"
+                  placeholder="Password"
+                  required
+                />
+                {error && <p className="text-red-500 mt-2">{error}</p>}
+                <div>
+                  <NavLink className="link link-hover text-sm text-gray-500">
+                    Forgot password?
+                  </NavLink>
+                </div>
+                <button
+                  type="submit"
+                  className="btn mt-4 bg-[#0cc0df] text-white w-full"
+                >
+                  Login
+                </button>
+              </fieldset>
+            </form>
+
+            <div className="divider">OR</div>
+
+            <button
+              onClick={handleGoogleLogin}
+              className="btn w-full border border-[#0cc0df] text-[#0cc0df] hover:bg-[#0cc0df] hover:text-white"
+            >
+              Continue with Google
+            </button>
+
+            <p className="text-center mt-4 text-gray-600">
+              Don’t have an account?{" "}
+              <NavLink
+                to="/register"
+                className="text-[#04a8c5] font-semibold link-hover"
+              >
+                Register
+              </NavLink>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
