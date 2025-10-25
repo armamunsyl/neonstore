@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router';
 const GamrCard = ({game}) => {
     const {id,title,coverPhoto, developer,ratings, description} = game;
-    console.log(game)
+    // console.log(game)
     return (
         <div className="card bg-base-100 shadow-sm">
             <figure>

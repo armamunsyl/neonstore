@@ -10,7 +10,7 @@ const MyProfile = () => {
   const [updating, setUpdating] = useState(false);
 
   useEffect(() => {
-    document.title = "NeonBytes Store | My Profile";
+    document.title = "Profile";
     if (user) {
       setName(user.displayName || "");
       setPhotoURL(user.photoURL || "");
@@ -32,14 +32,14 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center bg-[#f9fafb] px-4">
+    <div className="max-w-11/12 mx-auto min-h-[85vh] flex items-center justify-center bg-[#f9fafb] px-4 p-10">
       <div className="bg-white p-10 rounded-2xl shadow-md text-center max-w-sm w-full border border-gray-200">
         <div className="mx-auto mb-6">
           <img
             src={
               user?.photoURL && user.photoURL !== ""
                 ? user.photoURL
-                : "https://i.ibb.co/6Nf3pP7/default-avatar.png"
+                : ""
             }
             alt="User Avatar"
             className="w-28 h-28 mx-auto rounded-full border-4 border-[#0cc0df] object-cover"

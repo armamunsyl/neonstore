@@ -5,7 +5,7 @@ const gamePromise = fetch("/games.json").then(res=> res.json())
 
 const PopularGames = () => {
     const populerGames = use(gamePromise);
-    console.log(populerGames)
+    // console.log(populerGames)
     return (
        <div >
         <h1 className='text-3xl font-bold mt-4 mb-4 text-center'>Popular Games</h1>

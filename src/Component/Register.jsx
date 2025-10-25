@@ -54,7 +54,7 @@ const Register = () => {
   };
 
   useEffect(() => {
-    document.title = "NeonBytes Store | Register";
+    document.title = "Register";
   }, []);
 
   return (

@@ -11,6 +11,7 @@ import EsportsNews from "../Page/EsportsNews";
 import GameDetails from "../Component/GameDetails";
 import ErrorPage from "../Page/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import ForgotPass from "../Page/ForgotPass";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <GameDetails></GameDetails>
                 </PrivateRoute>
+            },
+            {
+                path: "/forgotpass",
+               Component: ForgotPass,
             }
 
         ]
