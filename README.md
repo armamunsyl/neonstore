@@ -25,4 +25,4 @@ daisyui
 postcss
 autoprefixer
 
-Developed by Abdur Rahman Mamunj
+Developed by Abdur Rahman Mamun
