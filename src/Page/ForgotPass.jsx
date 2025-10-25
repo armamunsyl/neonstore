@@ -18,6 +18,7 @@ const ForgotPass = () => {
 
   const handleReset = (e) => {
     e.preventDefault();
+
     if (!email) {
       toast.error("Please enter your email first!");
       return;
@@ -25,7 +26,10 @@ const ForgotPass = () => {
 
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        toast.success("Password reset email sent!");
+        toast.success("Password reset link sent! Redirecting to Gmail...");
+        setTimeout(() => {
+          window.open("https://mail.google.com", "_blank");
+        }, 10);
       })
       .catch(() => {
         toast.error("Failed to send reset email!");
