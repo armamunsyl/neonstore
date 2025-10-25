@@ -62,9 +62,6 @@ const Banner = () => {
               {slides[current].title}
             </h2>
             <p className="text-gray-600">{slides[current].description}</p>
-            <button className="btn bg-[#0cc0df] hover:bg-[#09b1cd] border-none text-white font-semibold">
-              Explore Now
-            </button>
           </motion.div>
           <motion.div
             initial={{ scale: 1.05, opacity: 0 }}
