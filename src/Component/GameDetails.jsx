@@ -31,7 +31,7 @@ const GameDetails = () => {
   
 
   return (
-    <div className="min-h-screen bg-[#f9fafb] py-14 px-6 md:px-16">
+    <div className="max-w-11/12 mx-auto bg-[#f9fafb] py-14 px-6 md:px-16">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
 
         <img
