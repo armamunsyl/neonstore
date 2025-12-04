@@ -19,6 +19,27 @@ const Navbar = () => {
             >
                 <li>Home</li>
             </NavLink>
+            <NavLink
+                to="all-games"
+                className={({ isActive }) =>
+                    isActive
+                        ? "text-[#0cc0df] font-semibold border-b-2 border-[#0cc0df] pb-1"
+                        : "text-gray-700 hover:text-[#0cc0df] transition"
+                }
+            >
+                <li>All Games</li>
+            </NavLink>
+            <NavLink
+                to="play-games"
+                className={({ isActive }) =>
+                    isActive
+                        ? "text-[#0cc0df] font-semibold border-b-2 border-[#0cc0df] pb-1"
+                        : "text-gray-700 hover:text-[#0cc0df] transition"
+                }
+            >
+                <li>Play Games</li>
+            </NavLink>
+
 
             <NavLink
                 to="/news"
